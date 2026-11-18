@@ -25,7 +25,7 @@ jobs:
           arduino-cli compile --fqbn esp8266com:esp8266:esp01:eesz=1M64 --output-dir build_output esp01_bridge.ino
 
       - name: Upload Binary Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: esp01-final-bin
           path: build_output/*.bin
