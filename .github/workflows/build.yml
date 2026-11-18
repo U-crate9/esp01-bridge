@@ -22,7 +22,7 @@ jobs:
       - name: Compile Sketch
         run: |
           mkdir -p build_output
-          arduino-cli compile --fqbn esp8266com:esp8266:esp01:eesz=1M64 --output-dir build_output esp01-bridge.ino
+          arduino-cli compile --fqbn esp8266com:esp8266:esp01:eesz=1M64 --output-dir build_output src/bridge.ino
 
       - name: Upload Binary Artifact
         uses: actions/upload-artifact@v4
